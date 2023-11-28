@@ -18,50 +18,50 @@
         <span>Translations </span></a>
 </li>
 
-<li class="nav-item mb-2" style="margin-top: 20px">
+<li class="nav-item">
     <a href="{{route('admin.header.index')}}"  class="nav-link">
-        <p style="font-size: 18px" >
+        <span>
             Header
-        </p>
+        </span>
     </a>
 </li>
 
-<li class="nav-item mb-2" style="margin-top: 20px">
+<li class="nav-item">
     <a href="{{route('admin.news.index')}}"  class="nav-link">
-        <p style="font-size: 18px" >
+        <span>
             News
-        </p>
+        </span>
     </a>
 </li>
 
-<li class="nav-item mb-2" style="margin-top: 20px">
+<li class="nav-item">
     <a href="{{route('admin.testimonials.index')}}"  class="nav-link">
-        <p style="font-size: 18px" >
+        <span>
             Testimonials
-        </p>
+        </span>
     </a>
 </li>
 
-<li class="nav-item mb-2" style="margin-top: 20px">
+<li class="nav-item">
     <a href="{{route('admin.legal.index')}}"  class="nav-link">
-        <p style="font-size: 18px" >
+        <span>
             Legal
-        </p>
+        </span>
     </a>
 </li>
-<li class="nav-item mb-2" style="margin-top: 20px">
+<li class="nav-item">
     <a href="{{route('admin.footer-menu.index')}}"  class="nav-link">
-        <p style="font-size: 18px" >
+        <span>
             Footer Menu
-        </p>
+        </span>
     </a>
 </li>
 
-<li class="nav-item mb-2" style="margin-top: 20px">
+<li class="nav-item">
     <a href="{{route('admin.homeSlider.index')}}"  class="nav-link">
-        <p style="font-size: 18px" >
+        <span>
             Home Slider
-        </p>
+        </span>
     </a>
 </li>
 
@@ -109,7 +109,7 @@
 </li>
 
 <li class="nav-item ">
-    <a href="{{route('home.index')}}" class="nav-link">
+    <a href="http://localhost:5173" class="nav-link">
         <span>Website</span></a>
 </li>
 

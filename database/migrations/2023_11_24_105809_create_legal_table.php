@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('legal', function (Blueprint $table) {
             $table->id();
-            $table->text('icon');
             $table->timestamps();
         });
     }

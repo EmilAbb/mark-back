@@ -50,14 +50,14 @@
                 </div>
 
 
-                <div class="form-group">
-                    <label>Icon</label>
+{{--                <div class="form-group">--}}
+{{--                    <label>Icon</label>--}}
 
-                    <input type="text" name="icon" class="form-control" value="{{old('icon',$model->icon ?? '')}}">
-                    @error('icon')
-                    <span class="text-danger">{{$message}}</span>
-                    @enderror
-                </div>
+{{--                    <input type="text" name="icon" class="form-control" value="{{old('icon',$model->icon ?? '')}}">--}}
+{{--                    @error('icon')--}}
+{{--                    <span class="text-danger">{{$message}}</span>--}}
+{{--                    @enderror--}}
+{{--                </div>--}}
 
 
 

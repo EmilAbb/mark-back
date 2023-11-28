@@ -24,7 +24,7 @@ class LegalController extends Controller
     public function getLegalData()
     {
         $legalData = Legal::all();
-        return response()->json(['legalData'=>$legalData]);
+        return response()->json($legalData);
     }
 
 

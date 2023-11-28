@@ -11,7 +11,6 @@ class LegalRequest extends FormRequest
     public function rules(): array
     {
         $data = [
-            'icon' => 'nullable|string',
 
         ];
         return $this->mapLangValidations($data);

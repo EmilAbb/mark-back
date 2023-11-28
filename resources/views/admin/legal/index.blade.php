@@ -11,7 +11,6 @@
                 <tr>
                     <th>id</th>
                     <th>Title</th>
-                    <th>Icon</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -23,7 +22,6 @@
                     <tr>
                         <td>{{$model->id}}</td>
                         <td>{{$model->title}}</td>
-                        <td>{{$model->icon}}</td>
                         <td>
                             <a class="btn bg-yellow" href="{{route($routeName.'.edit',$model->id)}}"><i class="fa-solid fa-pen text-white"></i></a>
                         </td>
