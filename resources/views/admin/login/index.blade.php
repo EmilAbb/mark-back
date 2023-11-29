@@ -18,34 +18,25 @@
     <div class="login-card-content">
         <div class="header">
 
-            <h3 style="color: #fdc654;font-weight: 600;font-size: 20px; margin-top: 15px">MARK</h3>
-        </div>
-        <form  action="{{ route('admin.login') }}" method="post">
-            @csrf
-            <div class="form">
-                <div class="form-field username">
-                    <div class="icon">
-                        <i class="far fa-envelope"></i>
-                    </div>
-                    @error('email')
-                    <small class="text-danger">{{$message}}</small>
-                    @enderror
-                    <input name="email" type="text" placeholder="Email">
-                </div>
-                <div class="form-field password">
-                    <div class="icon">
-                        <i class="fas fa-eye" id="showp" style="cursor:pointer;"></i>
-                    </div>
-                    @error('password')
-                    <small class="text-danger">{{$message}}</small>
-                    @enderror
-                    <input id="password" name="password" type="password" placeholder="Password">
-                </div>
 
-                <button type="submit">Login</button>
-            </div>
-        </form>
+        </div>
     </div>
+
+    <form action="{{ route('admin.login') }}" method="post">
+        @csrf
+        <div class="mb-3">
+            <h3 style="color: #fdc654;font-weight: 600;font-size: 20px; margin-top: 15px" class="w-100 text-center">MARK</h3>
+            <label for="exampleInputEmail1"  class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="w-[100%] d-flex justify-content-end">
+            <button type="submit" class="btn btn-warning">Login</button>
+        </div>
+    </form>
 
 </div>
 
