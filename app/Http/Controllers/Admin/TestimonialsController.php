@@ -21,7 +21,7 @@ class TestimonialsController extends Controller
    public function getTestiData ()
    {
         $testiData = Testimonial::all();
-        return response()->json(['testiData'=>$testiData]);
+        return response()->json($testiData);
    }
 
     public function index()

@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\PracticeController;
 use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\TestimonialsController;
 use App\Http\Controllers\Admin\TranslationsController;
+use App\Http\Controllers\LanguageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
 Route::get('/header',[HeaderController::class,'getHeaderData'])->withoutMiddleware('auth');
 Route::get('/news',[NewsController::class,'getNewsData'])->withoutMiddleware('auth');
 Route::get('/testimonials',[TestimonialsController::class,'getTestiData'])->withoutMiddleware('auth');
@@ -49,3 +51,7 @@ Route::get('/practice',[PracticeController::class,'getPracticeData'])->withoutMi
 Route::get('/contact',[ContactController::class,'getContactData'])->withoutMiddleware('auth');
 Route::post('/contactMessage',[ContactMessageController::class,'store'])->withoutMiddleware('auth');
 Route::get('/translation/{key}',[TranslationsController::class,'getTranslationsData'])->withoutMiddleware('auth');
+
+
+
+

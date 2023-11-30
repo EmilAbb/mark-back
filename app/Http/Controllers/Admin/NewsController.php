@@ -21,7 +21,7 @@ class NewsController extends Controller
     public function getNewsData()
     {
         $newsData = News::all();
-        return response()->json(['newsData' => $newsData]);
+        return response()->json($newsData);
     }
 
     public function index()
