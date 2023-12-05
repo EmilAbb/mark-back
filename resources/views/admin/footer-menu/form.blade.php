@@ -49,11 +49,9 @@
 
                 </div>
 
-
                 <div class="form-group">
                     <label>Onclick</label>
-
-                    <input type="text" name="onclick" class="form-control" value="{{old('onclick',$model->onclick ?? '')}}">
+                    <input type="text" placeholder="Onclick" name="onclick" value="{{old('onclick',$model->onclick ?? '')}}" class="form-control">
                     @error('onclick')
                     <span class="text-danger">{{$message}}</span>
                     @enderror

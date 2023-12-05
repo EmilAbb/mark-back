@@ -10,7 +10,9 @@ class NewsRequest extends FormRequest
 
     public function rules(): array
     {
-        $data = [];
+        $data = [
+            'image' => [Rule::requiredIf(request()->method == self::METHOD_POST),'image','mimes:jpg,jpeg,png'],
+        ];
         return $this->mapLangValidations($data);
     }
     private function mapLangValidations($data)

@@ -1,6 +1,6 @@
 @extends('admin.layouts.admin')
 @section('content')
-    <?php  $routeName='admin.news' ?><br>
+    <?php  $routeName='admin.menus' ?><br>
     <div class="card">
 
         <div class="card-body">
@@ -33,28 +33,18 @@
                                 <div class="tab-pane fade {{$loop->first ? 'active show' : ''}}" id="tab-{{$lang}}"
                                      role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
                                     <div class="form-group">
-                                        <label>Date</label>
-                                        <input type="text" placeholder="Date" name="{{$lang}}[date]"
-                                               value="{{old($lang.'date', isset($model) ? $model->translateOrDefault($lang)->date : '' )}}"
-                                               class="form-control">
-                                        @error("$lang.date")
-                                        <span class="text-danger">{{$message}}</span>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group">
                                         <label>Title</label>
                                         <input type="text" placeholder="Title" name="{{$lang}}[title]"
-                                               value="{{old($lang.'title', isset($model) ? $model->translateOrDefault($lang)->title : ''  )}}"
+                                               value="{{old($lang.'title', isset($model) ? $model->translateOrDefault($lang)->title : '' )}}"
                                                class="form-control">
                                         @error("$lang.title")
                                         <span class="text-danger">{{$message}}</span>
                                         @enderror
                                     </div>
-
                                     <div class="form-group">
                                         <label>Text</label>
                                         <input type="text" placeholder="Text" name="{{$lang}}[text]"
-                                               value="{{old($lang.'text', isset($model) ? $model->translateOrDefault($lang)->text : ''  )}}"
+                                               value="{{old($lang.'text', isset($model) ? $model->translateOrDefault($lang)->text : '' )}}"
                                                class="form-control">
                                         @error("$lang.text")
                                         <span class="text-danger">{{$message}}</span>
@@ -68,17 +58,15 @@
 
                 </div>
 
+
                 <div class="form-group">
-                    <label>Image</label>
-                    @isset($model)
-                        <br>
-                        <img width="200" src="{{asset('storage/'.$model->image)}}">
-                    @endisset
-                    <input type="file" name="image" class="form-control">
-                    @error('image')
+                    <label>Onclick</label>
+                    <input type="text" placeholder="Onclick" name="onclick" value="{{old('onclick',$model->onclick ?? '')}}" class="form-control">
+                    @error('onclick')
                     <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>
+
 
                 <button class="btn btn-success">Save</button>
             </form>

@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\FooterMenuController;
 use App\Http\Controllers\Admin\HeaderController;
 use App\Http\Controllers\Admin\HomeSliderController;
 use App\Http\Controllers\Admin\LegalController;
+use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PracticeController;
 use App\Http\Controllers\Admin\ServicesController;
@@ -29,6 +30,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.','middleware' => 'admin'],function
     Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
 
     Route::resource('/translation',TranslationsController::class)->except('show');
+    Route::resource('/menus',MenuController::class)->except('show');
 
 
     Route::resource('/header',HeaderController::class)->except('show');

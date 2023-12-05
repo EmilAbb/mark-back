@@ -41,7 +41,7 @@ class HomeSliderService
     {
         $data = $request->all();
         if ($request->has('image')) {
-            $data['image'] = $this->fileUploadService->replaceFile($request->image, $model->image, 'header');
+            $data['image'] = $this->fileUploadService->replaceFile($request->image, $model->image, 'homeSlider');
         }
 
         if ($request->has('background_img_one')) {

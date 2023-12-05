@@ -24,6 +24,13 @@ class NewsController extends Controller
         return response()->json($newsData);
     }
 
+    public function show($id)
+    {
+        $news = News::findOrFail($id);
+
+        return response()->json($news);
+    }
+
     public function index()
     {
         $models=News::with(['translations'])->paginate(5);

@@ -24,6 +24,8 @@ class NewsService
     public function store(NewsRequest $newsRequest)
     {
         $data = $newsRequest->all();
+        $data['image'] = $this->fileUploadService->uploadFile($newsRequest->image, 'news');
+
         unset($data['_token']);
         $model = News::create($data);
         self::clearCache();
@@ -33,6 +35,9 @@ class NewsService
     public function update($request,$model)
     {
         $data = $request->all();
+        if ($request->has('image')) {
+            $data['image'] = $this->fileUploadService->replaceFile($request->image, $model->image, 'news');
+        }
         $model =   $this->repository->save($data,$model );
         self::clearCache();
         return $model;

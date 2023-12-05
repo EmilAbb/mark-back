@@ -1,7 +1,7 @@
 @extends('admin.layouts.admin')
 @section('content')
 
-    <?php  $routeName='admin.news' ?>
+    <?php  $routeName='admin.menus' ?>
     <a class="btn btn-primary my-1" href="{{route($routeName.'.create')}}">Add</a>
 
     <div class="card">
@@ -10,10 +10,9 @@
                 <thead>
                 <tr>
                     <th>id</th>
-                    <th>Date</th>
                     <th>Title</th>
                     <th>Text</th>
-                    <th>Image</th>
+                    <th>Onclick</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -24,10 +23,9 @@
 
                     <tr>
                         <td>{{$model->id}}</td>
-                        <td>{{$model->date}}</td>
                         <td>{{$model->title}}</td>
                         <td>{{$model->text}}</td>
-                        <td><img width="100" height="100" src="{{asset('storage/'.$model->image)}}" alt=""></td>
+                        <td>{{$model->onclick}}</td>
                         <td>
                             <a class="btn bg-yellow" href="{{route($routeName.'.edit',$model->id)}}"><i class="fa-solid fa-pen text-white"></i></a>
                         </td>

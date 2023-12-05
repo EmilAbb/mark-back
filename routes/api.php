@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\FooterMenuController;
 use App\Http\Controllers\Admin\HeaderController;
 use App\Http\Controllers\Admin\HomeSliderController;
 use App\Http\Controllers\Admin\LegalController;
+use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PracticeController;
 use App\Http\Controllers\Admin\ServicesController;
@@ -36,7 +37,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::middleware('setLocale')->group(function () {
     Route::get('/header',[HeaderController::class,'getHeaderData'])->withoutMiddleware('auth');
+    Route::get('/menus',[MenuController::class,'getMenusData'])->withoutMiddleware('auth');
     Route::get('/news',[NewsController::class,'getNewsData'])->withoutMiddleware('auth');
+    Route::get('/news/{id}',[NewsController::class,'show'])->withoutMiddleware('auth');
     Route::get('/testimonials',[TestimonialsController::class,'getTestiData'])->withoutMiddleware('auth');
     Route::get('/legal',[LegalController::class,'getLegalData'])->withoutMiddleware('auth');
     Route::get('/footer-menu',[FooterMenuController::class,'getFooterMenuData'])->withoutMiddleware('auth');

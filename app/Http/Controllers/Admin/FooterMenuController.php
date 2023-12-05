@@ -27,7 +27,7 @@ class FooterMenuController extends Controller
     public function getFooterMenuData()
     {
         $footerMenuData = FooterMenu::all();
-        return response()->json(['footerMenuData'=>$footerMenuData]);
+        return response()->json($footerMenuData);
     }
 
 

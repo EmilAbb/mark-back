@@ -1,17 +1,16 @@
 <?php
 
-
 namespace App\Models;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-class About extends Model implements TranslatableContract
+class Menu extends Model implements TranslatableContract
 {
     use HasFactory ,Translatable;
-    protected $table = 'about';
+    use HasFactory ,Translatable;
+    protected $table = 'menus';
     protected $guarded = [];
-    public $translationModel = AboutTranslation::class;
-    public  $translatedAttributes = ['link'];
+    public $translationModel = MenuTranslation::class;
+    public  $translatedAttributes = ['title','text'];
 }

@@ -18,6 +18,11 @@
         <span>Translations </span></a>
 </li>
 
+<li class="nav-item ">
+    <a href="{{route('admin.menus.index')}}" class="nav-link">
+        <span>Menus</span></a>
+</li>
+
 <li class="nav-item">
     <a href="{{route('admin.header.index')}}"  class="nav-link">
         <span>
